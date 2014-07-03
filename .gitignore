@@ -28,3 +28,9 @@
 
 # "temporary" build files
 /target
+
+.classpath
+.idea
+.project
+grails-angular-example-grailsPlugins.iml
+grails-angular-example.iml
