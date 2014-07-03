@@ -1,5 +1,7 @@
 package grails.angular.example
+import grails.rest.Resource
 
+@Resource(uri = '/propietarios', formats=['json', 'xml'])
 class Propietario {
 
     String nombre
@@ -7,6 +9,8 @@ class Propietario {
     String apellidoPaterno
     Integer edad
     Date fechaNacimiento
+
+    static hasMany = [mascotas: Mascota]
 
 
     static mapping = {
