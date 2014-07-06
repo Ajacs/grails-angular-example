@@ -5,7 +5,7 @@ import org.codehaus.groovy.grails.web.converters.configuration.ObjectMarshallerR
 // Place your Spring DSL code here
 beans = {
 
-    //comenzamos la deficinicion de nuestro JSONMarshaller
+    //registro de nuestros beans JsonMarshaller
 
     customPropietarioJsonMarshaller(ObjectMarshallerRegisterer){
         marshaller = new PropietarioJsonMarshaller()
