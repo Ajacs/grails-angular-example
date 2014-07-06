@@ -1,7 +1,7 @@
 package grails.angular.example
 import grails.rest.Resource
 
-@Resource(uri = '/propietarios', formats=['json', 'xml'])
+@Resource(uri = '/propietarios', formats=['json', 'xml'], readOnly = true)
 class Propietario {
 
     String nombre
