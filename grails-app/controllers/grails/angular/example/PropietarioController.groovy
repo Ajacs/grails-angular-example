@@ -13,7 +13,8 @@ class PropietarioController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Propietario.list(params), model:[propietarioInstanceCount: Propietario.count()]
+        def offset = params?:0
+        respond Propietario.list(params), model:[totalCount: Propietario.count(), currentMax:params.max,currentOffset:offset]
     }
 
     def show(Propietario propietarioInstance) {
